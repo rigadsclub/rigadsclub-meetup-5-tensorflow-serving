@@ -1,0 +1,42 @@
+{
+  "instances": [
+    {
+      "op_type": [
+        "For sale"
+      ],
+      "district": [
+        "Purvciems"
+      ],
+      "street": [
+        ""
+      ],
+      "rooms": [
+        2
+      ],
+      "area": [
+        50
+      ],
+      "floor": [
+        5
+      ],
+      "total_floors": [
+        9
+      ],
+      "house_seria": [
+        "119."
+      ],
+      "house_type": [
+        "Panel"
+      ],
+      "condition": [
+        "All, amenities"
+      ],
+      "lat": [
+        56.948981770043346
+      ],
+      "lon": [
+        24.1429903312134
+      ]
+    }
+  ]
+}
