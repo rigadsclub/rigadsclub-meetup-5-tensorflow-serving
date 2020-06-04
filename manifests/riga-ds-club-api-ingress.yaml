@@ -1,0 +1,8 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: rigadsclub-demo-ingress
+spec:
+  backend:
+    serviceName: rigadsclub-demo-service
+    servicePort: 8501

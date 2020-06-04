@@ -1,0 +1,22 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: rigadsclub-demo-deployment
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: rigadsclub-demo-server
+    spec:
+      containers:
+      - name: rigadsclub-demo-container
+        image: eu.gcr.io/rigadsclub-demo/rre
+        ports:
+        - containerPort: 8501
+        readinessProbe:
+          httpGet:
+            path: /v1/models/rre
+            port: 8501
+          periodSeconds: 3
+          timeoutSeconds: 1

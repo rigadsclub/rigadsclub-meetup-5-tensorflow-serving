@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    run: rigadsclub-demo-service
+  name: rigadsclub-demo-service
+spec:
+  type: NodePort
+  ports:
+    - protocol: TCP
+      port: 8501
+      targetPort: 8501
+  selector:
+    app: rigadsclub-demo-server
+
