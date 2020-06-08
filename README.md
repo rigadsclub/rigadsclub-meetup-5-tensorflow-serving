@@ -84,3 +84,16 @@ kubectl apply -f ./manifests/riga-ds-club-api-service.yaml
 ```
 kubectl apply -f ./manifests/riga-ds-club-api-ingress.yaml
 ```
+
+### Bonus track
+
+## Assigning IP for the API
+```
+gcloud compute project-info update --default-network-tier STANDARD
+gcloud compute addresses create riga-ds-club-api-address --region europe-west1 --network-tier STANDARD
+gcloud compute addresses describe riga-ds-club-api-address --region europe-west1
+
+kubectl create ns nginx
+helm install --name nginx-ingress stable/nginx-ingress --namespace nginx --set controller.service.loadBalancerIP=35.206.188.185
+
+```
